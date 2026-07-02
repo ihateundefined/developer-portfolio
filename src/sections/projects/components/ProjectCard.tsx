@@ -1,12 +1,11 @@
 import {
   BriefcaseBusiness,
   CircleCheckBig,
-  Code2,
   Hammer,
   Lightbulb,
   TriangleAlert,
 } from 'lucide-react';
-
+import SocialLink from '../../../components/common/SocialLink';
 import Badge from '../../../components/common/Badge';
 import type { Project } from '../../../types/project';
 
@@ -81,28 +80,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
       {(project.github || project.demo) && (
         <div className="mt-8 flex flex-wrap gap-3">
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm text-white transition hover:border-blue-500 hover:bg-blue-500"
-            >
-              <Code2 size={16} />
-              GitHub
-            </a>
-          )}
-
-          {project.demo && (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm text-white transition hover:border-blue-500 hover:bg-blue-500"
-            >
-              Demo
-            </a>
-          )}
+          {project.github && <SocialLink type="github" href={project.github} />}
+          {project.demo && <SocialLink type="github" href={project.demo} />}
         </div>
       )}
     </article>

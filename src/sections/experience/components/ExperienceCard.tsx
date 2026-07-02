@@ -7,7 +7,7 @@ interface ExperienceCardProps {
 
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   return (
-    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-10 backdrop-blur-sm transition duration-300 hover:border-blue-500/40">
+    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-white/[0.05]">
       {/* Header */}
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div>
