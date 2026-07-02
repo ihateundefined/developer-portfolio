@@ -2,6 +2,7 @@ import Experience from '../../sections/experience/Experience';
 import Hero from '../../sections/hero/Hero';
 import Journey from '../../sections/journey/Journey';
 import Projects from '../../sections/projects/Projects';
+import Research from '../../sections/research/Research';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Journey />
       <Experience />
       <Projects />
+      <Research />
     </>
   );
 };
