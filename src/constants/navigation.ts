@@ -24,10 +24,6 @@ export const navigation = [
     href: "#skills",
   },
   {
-    title: "Awards",
-    href: "#awards",
-  },
-  {
     title: "Contact",
     href: "#contact",
   },
