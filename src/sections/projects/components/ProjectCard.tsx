@@ -81,7 +81,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       {(project.github || project.demo) && (
         <div className="mt-8 flex flex-wrap gap-3">
           {project.github && <SocialLink type="github" href={project.github} />}
-          {project.demo && <SocialLink type="github" href={project.demo} />}
+          {project.demo && <SocialLink type="link" href={project.demo} />}
         </div>
       )}
     </article>

@@ -1,7 +1,7 @@
-import { Mail, Code2 } from 'lucide-react';
+import { Mail, Code2, Link2 } from 'lucide-react';
 
 interface SocialLinkProps {
-  type: 'github' | 'email' | 'projects' | 'etc';
+  type: 'github' | 'email' | 'projects' | 'link';
   variant?: 'full' | 'iconOnly';
   href: string;
   label?: string;
@@ -21,13 +21,13 @@ export default function SocialLink({
   const iconOnlyClass =
     'inline-flex items-center justify-center p-2 text-gray-400 hover:text-blue-400 transform transition-all duration-300 hover:-translate-y-1';
 
-  const isGithub = type === 'github';
-  const isExternal = isGithub;
+  const isExternal = type === 'github' || type === 'link';
 
   const defaultLabels = {
     github: 'GitHub',
     email: 'Email',
     projects: 'Projects',
+    link: 'Website',
   };
 
   const renderIcon = () => {
@@ -48,6 +48,8 @@ export default function SocialLink({
         return <Mail size={18} />;
       case 'projects':
         return <Code2 size={18} />;
+      case 'link':
+        return <Link2 size={18} />;
     }
   };
 
