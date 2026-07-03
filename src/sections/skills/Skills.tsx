@@ -1,4 +1,5 @@
 import Badge from '../../components/common/Badge';
+import Card from '../../components/common/Card';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import { certifications, skillGroups } from '../../data/skills';
@@ -12,10 +13,7 @@ const Skills = () => {
         <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
           <div className="grid gap-6 md:grid-cols-2">
             {skillGroups.map((group) => (
-              <div
-                key={group.category}
-                className="rounded-3xl border border-white/10 bg-white/[0.03] p-7 backdrop-blur-sm"
-              >
+              <Card key={group.category} className="p-7">
                 <h3 className="mb-5 text-xl font-bold text-white">
                   {group.category}
                 </h3>
@@ -25,11 +23,11 @@ const Skills = () => {
                     <Badge key={item} text={item} />
                   ))}
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-7 backdrop-blur-sm">
+          <Card className="p-7">
             <h3 className="mb-6 text-xl font-bold text-white">
               Certifications
             </h3>
@@ -45,7 +43,7 @@ const Skills = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </Card>
         </div>
       </Container>
     </section>

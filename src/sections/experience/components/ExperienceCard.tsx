@@ -1,4 +1,5 @@
 import Badge from '../../../components/common/Badge';
+import Card from '../../../components/common/Card';
 import type { Experience } from '../../../types/experience';
 
 interface ExperienceCardProps {
@@ -7,13 +8,17 @@ interface ExperienceCardProps {
 
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   return (
-    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-white/[0.05]">
+    <Card>
       {/* Header */}
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <h3 className="text-3xl font-bold text-white">
-            {experience.company}
-          </h3>
+          <div className="flex items-center gap-4">
+            <img
+              src={experience.logo}
+              alt={experience.company}
+              className="h-12 w-auto"
+            />
+          </div>
 
           <p className="mt-2 text-lg text-blue-400">{experience.position}</p>
         </div>
@@ -78,7 +83,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           ))}
         </div>
       </div>
-    </article>
+    </Card>
   );
 };
 

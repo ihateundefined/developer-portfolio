@@ -9,14 +9,14 @@ const CodeEditor = () => {
           <span className="h-3 w-3 rounded-full bg-yellow-400" />
           <span className="h-3 w-3 rounded-full bg-green-400" />
         </div>
-        <span className="text-sm text-zinc-400">developer.ts</span>
+        <span className="text-sm text-zinc-400">Developer.tsx</span>
         <div />
       </div>
 
       <div className="overflow-x-auto p-6 font-mono text-[15px] leading-8">
         <div>
           <span className="text-pink-400">const</span>{' '}
-          <span className="text-blue-300">developer</span>{' '}
+          <span className="text-blue-300">Developer</span>{' '}
           <span className="text-white">=</span>{' '}
           <span className="text-white">{'{'}</span>
         </div>
@@ -38,7 +38,7 @@ const CodeEditor = () => {
           <span className="text-white">:</span>{' '}
           <span className="text-white">[</span>
           <span className="text-green-400">'Chemistry'</span>,
-          <span className="text-green-400"> 'Computer Science'</span>
+          <span className="text-green-400">'Computer Science'</span>
           <span className="text-white">]</span>,
         </div>
 
@@ -47,9 +47,9 @@ const CodeEditor = () => {
           <span className="text-white">:</span>{' '}
           <span className="text-white">[</span>
           <span className="text-green-400">'Frontend'</span>,
-          <span className="text-green-400"> 'Backend'</span>,
-          <span className="text-green-400"> 'Database'</span>,
-          <span className="text-green-400"> 'Banking'</span>
+          <span className="text-green-400">'Backend'</span>,
+          <span className="text-green-400">'Database'</span>,
+          <span className="text-green-400">'Banking'</span>
           <span className="text-white">]</span>,
         </div>
 
@@ -62,7 +62,7 @@ const CodeEditor = () => {
         </div>
 
         <div>{'};'}</div>
-        <div className="mt-8 text-pink-400">export default developer;</div>
+        <div className="mt-8 text-pink-400">export default Developer;</div>
       </div>
     </div>
   );

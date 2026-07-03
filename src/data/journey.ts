@@ -24,7 +24,7 @@ export const journey: JourneyItem[] = [
   },
   {
     year: "2025",
-    title: "Software Engineer",
+    title: "Software Developer",
     subtitle: "IBK PAYGOS",
     description:
       "Worked across frontend, backend, database, and banking systems.",

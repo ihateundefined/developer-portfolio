@@ -1,5 +1,6 @@
 import {
   BriefcaseBusiness,
+  Car,
   CircleCheckBig,
   Hammer,
   Lightbulb,
@@ -7,6 +8,7 @@ import {
 } from 'lucide-react';
 import SocialLink from '../../../components/common/SocialLink';
 import Badge from '../../../components/common/Badge';
+import Card from '../../../components/common/Card';
 import type { Project } from '../../../types/project';
 
 interface ProjectCardProps {
@@ -15,7 +17,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-white/[0.05]">
+    <Card>
       <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
         <div>
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-blue-400">
@@ -84,7 +86,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           {project.demo && <SocialLink type="link" href={project.demo} />}
         </div>
       )}
-    </article>
+    </Card>
   );
 };
 

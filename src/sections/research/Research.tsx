@@ -1,4 +1,5 @@
 import Badge from '../../components/common/Badge';
+import Card from '../../components/common/Card';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import { research } from '../../data/research';
@@ -9,7 +10,7 @@ const Research = () => {
       <Container>
         <SectionTitle subtitle="BACKGROUND" title="Research Experience" />
 
-        <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-10 backdrop-blur-sm">
+        <Card>
           <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
             <div>
               <h3 className="text-3xl font-bold text-white">
@@ -31,7 +32,7 @@ const Research = () => {
             <InfoGroup title="Publications" items={research.publications} />
             <InfoGroup title="Awards" items={research.awards} />
           </div>
-        </div>
+        </Card>
       </Container>
     </section>
   );

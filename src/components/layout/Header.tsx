@@ -13,10 +13,10 @@ const Header = () => {
 
           <div>
             <h1 className="text-sm font-bold tracking-wide text-white">
-              CHO SUNHEE
+              SUNHEE CHO
             </h1>
 
-            <p className="text-xs text-zinc-500">Software Engineer</p>
+            <p className="text-xs text-zinc-500">Software Developer</p>
           </div>
         </a>
 

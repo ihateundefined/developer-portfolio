@@ -1,6 +1,7 @@
 export const experiences = [{
 company:"IBK PAYGOS",
-position:"Software Engineer",
+logo:"https://gos.ibk.co.kr/icons/logo_ibk_paygos_row.svg",
+position:"Software Developer",
 period:"2025",
 overview:"Enterprise Banking Platform",
 responsibilities:[
