@@ -1,10 +1,13 @@
 export interface Experience {
   company: string;
   logo: string;
+  link: string;
   position: string;
   period: string;
   overview: string;
-  responsibilities: string[];
-  achievements: string[];
+  projects: {
+    title: string;
+    details: string[];
+  }[]; 
   skills: string[];
 }

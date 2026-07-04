@@ -13,11 +13,18 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <div className="flex items-center gap-4">
-            <img
-              src={experience.logo}
-              alt={experience.company}
-              className="h-12 w-auto"
-            />
+            <a
+              href={experience.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                src={experience.logo}
+                alt={experience.company}
+                className="h-12 w-auto"
+              />
+            </a>
           </div>
 
           <p className="mt-2 text-lg text-blue-400">{experience.position}</p>
@@ -33,42 +40,39 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-zinc-500">
           Overview
         </h4>
-
         <p className="leading-8 text-zinc-300">{experience.overview}</p>
       </div>
 
-      {/* Responsibilities */}
+      {/* Projects & Achievements (여기가 핵심 변경 구간입니다!) */}
       <div className="mt-10">
         <h4 className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-zinc-500">
-          Responsibilities
+          Projects & Achievements
         </h4>
 
-        <ul className="grid gap-3 md:grid-cols-2">
-          {experience.responsibilities.map((item) => (
-            <li key={item} className="flex items-start gap-3 text-zinc-300">
-              <span className="mt-2 h-2 w-2 rounded-full bg-blue-500" />
+        <div className="space-y-8">
+          {experience.projects.map((project, pIdx) => (
+            <div key={pIdx} className="space-y-3">
+              {/* 프로젝트 분류 제목 */}
+              {/* text-zinc-200  */}
+              <h5 className="text-md font-bold text-blue-400 pl-[26px]">
+                {project.title}
+              </h5>
 
-              {item}
-            </li>
+              {/* 프로젝트 상세 성과 리스트 */}
+              <ul className="space-y-3 pl-1">
+                {project.details.map((detail, dIdx) => (
+                  <li
+                    key={dIdx}
+                    className="flex items-start gap-3 text-zinc-300 leading-7"
+                  >
+                    <span className="mt-1 text-blue-400 select-none">✓</span>
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
-      </div>
-
-      {/* Achievements */}
-      <div className="mt-10">
-        <h4 className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-zinc-500">
-          Key Achievements
-        </h4>
-
-        <ul className="space-y-4">
-          {experience.achievements.map((item) => (
-            <li key={item} className="flex items-start gap-3 text-zinc-300">
-              <span className="mt-2 text-blue-400">✓</span>
-
-              {item}
-            </li>
-          ))}
-        </ul>
+        </div>
       </div>
 
       {/* Skills */}

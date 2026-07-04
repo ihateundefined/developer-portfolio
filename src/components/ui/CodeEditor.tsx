@@ -62,7 +62,11 @@ const CodeEditor = () => {
         </div>
 
         <div>{'};'}</div>
-        <div className="mt-8 text-pink-400">export default Developer;</div>
+        <div className="mt-8">
+          <span className="text-pink-400">export default</span>{' '}
+          <span className="text-blue-300">Developer</span>
+          <span className="text-white">;</span>
+        </div>
       </div>
     </div>
   );
